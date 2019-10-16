@@ -584,7 +584,7 @@ res = try( #catch unexpected errors
   }
 
   # compute mean of flowpaths as average catena length (calclength-method, Chochrane & Flanagan, 2003) #
-  mean_length <- sum(dist2river_vals[curr_entries]^2)/sum(dist2river_vals[curr_entries])
+  mean_length <- weighted.quantile(dist2river_vals[curr_entries],dist2river_vals[curr_entries], prob = 0.5, plot = FALSE)
  
   # skip very short catenas
   # ERROR CODE 4
