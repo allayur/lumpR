@@ -584,7 +584,7 @@ res = try( #catch unexpected errors
   }
 
   # compute mean of flowpaths as average catena length (calclength-method, Chochrane & Flanagan, 2003) #
-  mean_length <- weighted.quantile(dist2river_vals[curr_entries], dist2river_vals[curr_entries]/sum(dist2river_vals[curr_entries]), prob = 0.75, plot = FALSE)
+  mean_length <- weighted.quantile(dist2river_vals[curr_entries], dist2river_vals[curr_entries]/sum(dist2river_vals[curr_entries]), prob = 0.95, plot = FALSE)
   #print (mean_length)
   #mean_length <- sum(dist2river_vals[curr_entries]^2)/sum(dist2river_vals[curr_entries])
   #print (mean_length)
